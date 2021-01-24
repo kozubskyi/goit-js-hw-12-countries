@@ -12,12 +12,11 @@ import { debounce } from 'lodash';
 // import * as debounce from 'lodash/debounce';
 // var debounce = require('lodash.debounce'); //! Почему-то при таком варианте не работал _.debounce
 
-refs.form.addEventListener('input', debounce(onFormInput, 500));
+refs.form.addEventListener('submit', event => event.preventDefault());
+refs.input.addEventListener('input', debounce(onFormInput, 500));
 refs.clearBtn.addEventListener('click', clearInput);
 
 function onFormInput(event) {
-  event.preventDefault();
-
   const inputValue = event.target.value;
 
   clearCountriesContainer();
