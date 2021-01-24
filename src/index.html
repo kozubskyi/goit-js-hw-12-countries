@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="search-form js-search-form" id="country-form">
+        <div class="search-container">
+          <label class="loupe-icon" for="country-input">🔍</label>
+          <input
+            type="text"
+            class="form-input js-form-input"
+            name="country"
+            form="country-form"
+            pattern="^[a-zA-Z]+$"
+            placeholder="Start to type country..."
+            id="country-input"
+            autofocus
+          />
+          <button
+            type="button"
+            class="clear-icon js-clear-icon"
+            title="Clear the search bar"
+          >
+            ✖️
+          </button>
+        </div>
+        <div class="countries-container js-countries-container"></div>
+      </form>
+    </div>
+  </body>
+</html>
